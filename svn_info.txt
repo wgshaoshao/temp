@@ -1,0 +1,12 @@
+Path: .
+Working Copy Root Path: /Users/mac/Desktop/Kuaikan
+URL: svn://wanggang@101.201.175.216/ishugui/client/ios/trunk/Kuaikan
+Repository Root: svn://wanggang@101.201.175.216/ishugui
+Repository UUID: 0f63e15f-b3cf-4fe9-b952-0b272858778d
+Revision: 13674
+Node Kind: directory
+Schedule: normal
+Last Changed Author: wanggang
+Last Changed Rev: 13674
+Last Changed Date: 2016-06-01 18:47:38 +0800 (三, 01  6 2016)
+

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16D32" minimumToolsVersion="Xcode 7.3" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Book" representedClassName="Book" syncable="YES">
+        <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bookfrom" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="bookid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bookname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bookstatus" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="confirmStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="coverurl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="currentCatelogId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="entityid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="format" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="hasRead" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="isAddBook" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="isdefautbook" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="isEnd" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="isparkCatalog" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="isUpdate" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="marketId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="marketStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="payRemind" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="payStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="payWay" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sourceFrom" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="catelog" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Catelog" inverseName="book" inverseEntity="Catelog" syncable="YES"/>
+        <relationship name="parkCatalog" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ParkCatalog" inverseName="book" inverseEntity="ParkCatalog" syncable="YES"/>
+    </entity>
+    <entity name="BookRack" representedClassName="BookRack" syncable="YES">
+        <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bookName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="chapterId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coverImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="entityid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="introuce" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isUpate" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="updateChapter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wifiBook" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="rack" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Rack" inverseName="rookRack" inverseEntity="Rack" syncable="YES"/>
+    </entity>
+    <entity name="Catelog" representedClassName="Catelog" syncable="YES">
+        <attribute name="bookid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="catelogfrom" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="catelogid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="catelogname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cmBookAttribute" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cmConsumePrice" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cmIsVip" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cmMarketPrice" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cmOrderRelationShip" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="currentPos" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dlTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="entityid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="errType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isalreadypay" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isdownload" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isNewPayUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ispay" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ispayupload" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isread" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isupload" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="newUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="next" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nextPayUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="path" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="payTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="payUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="preIsdownload" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prePayUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="previous" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="book" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Book" inverseName="catelog" inverseEntity="Book" syncable="YES"/>
+        <relationship name="chapter" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Chapter" inverseName="catelog" inverseEntity="Chapter" syncable="YES"/>
+    </entity>
+    <entity name="Chapter" representedClassName="Chapter" syncable="YES">
+        <attribute name="bookid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="catelogid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="chapterPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="entityid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="path" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="catelog" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Catelog" inverseName="chapter" inverseEntity="Catelog" syncable="YES"/>
+    </entity>
+    <entity name="ParkCatalog" representedClassName="ParkCatalog" syncable="YES">
+        <attribute name="bookid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="entityid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tips" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="book" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Book" inverseName="parkCatalog" inverseEntity="Book" syncable="YES"/>
+    </entity>
+    <entity name="Rack" representedClassName="Rack" syncable="YES">
+        <attribute name="entityid" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="rookRack" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BookRack" inverseName="rack" inverseEntity="BookRack" syncable="YES"/>
+    </entity>
+    <entity name="Read" representedClassName="Read" syncable="YES">
+        <attribute name="entityid" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="readRecord" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ReadRecord" inverseName="read" inverseEntity="ReadRecord" syncable="YES"/>
+    </entity>
+    <entity name="ReadRecord" representedClassName="ReadRecord" syncable="YES">
+        <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bookIcon" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bookID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bookName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="chapterID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="chapterIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="currentPageIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="entityid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="introduce" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="readTime" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="read" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Read" inverseName="readRecord" inverseEntity="Read" syncable="YES"/>
+    </entity>
+    <entity name="Record" representedClassName="Record" syncable="YES">
+        <attribute name="entityid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="keyword" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="recordTime" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="searchRecord" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SearchRecord" inverseName="record" inverseEntity="SearchRecord" syncable="YES"/>
+    </entity>
+    <entity name="SearchRecord" representedClassName="SearchRecord" syncable="YES">
+        <attribute name="entityid" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="record" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Record" inverseName="searchRecord" inverseEntity="Record" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Book" positionX="-1098" positionY="-1344" width="128" height="435"/>
+        <element name="BookRack" positionX="-1359" positionY="-1197" width="128" height="210"/>
+        <element name="Catelog" positionX="-765" positionY="-1350" width="128" height="510"/>
+        <element name="Chapter" positionX="-594" positionY="-972" width="128" height="135"/>
+        <element name="ParkCatalog" positionX="-1323" positionY="-981" width="128" height="135"/>
+        <element name="Rack" positionX="-1557" positionY="-1062" width="128" height="75"/>
+        <element name="Read" positionX="-747" positionY="-714" width="128" height="73"/>
+        <element name="ReadRecord" positionX="-929" positionY="-849" width="128" height="208"/>
+        <element name="Record" positionX="-1125" positionY="-825" width="128" height="105"/>
+        <element name="SearchRecord" positionX="-1314" positionY="-810" width="128" height="75"/>
+    </elements>
+</model>

@@ -1,0 +1,1 @@
+set p_app_name=超级医道高手

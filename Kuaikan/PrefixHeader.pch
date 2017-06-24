@@ -1,0 +1,189 @@
+//
+//  PrefixHeader.pch
+//  Kuaikan
+//
+//  Created by 少少 on 16/3/21.
+//  Copyright © 2016年 DZKJ. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#endif
+
+
+#ifdef __OBJC__
+
+#import "UIView+Extension.h"
+#import "AFHTTPSessionManager.h"
+#import "JSONAdapter.h"
+#import "ZipArchive.h"
+#import "Logic.h"
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <CoreTelephony/CoreTelephonyDefines.h>
+#import "NSDictionary+MY.h"
+#import "NetworkModel.h"
+
+
+#import "Chapter+CoreDataClass.h"
+#import "Book+CoreDataClass.h"
+#import "BookRack+CoreDataClass.h"
+#import "Rack+CoreDataClass.h"
+#import "Catelog+CoreDataClass.h"
+#import "DVCoreDataManager.h"
+
+#import "JYS_SqlManager.h"
+
+#import "Masonry.h"
+#import "UIView+MB.h"
+#import "UIImageView+WebCache.h"
+#import "UITableViewCell+Nib.h"
+#import "AppDelegate.h"
+#import "MJExtension.h"
+#import "SVProgressHUD.h"
+#import "BaseViewController.h"
+#import "YFKeychainTool.h"
+#import "UMMobClick/MobClick.h"
+#import "WHC_ModelSqlite.h"
+
+#endif
+
+
+#ifdef DEBUG
+
+#define LRString [NSString stringWithFormat:@"%s", __FILE__].lastPathComponent
+#define LRLog(...) printf(" %s 第%d行: %s\n\n", [LRString UTF8String] ,__LINE__, [[NSString stringWithFormat:__VA_ARGS__] UTF8String]);
+#else
+
+#define LRLog(...)
+#endif
+
+
+/** 每次提交新版本都需要修改提交日期 */
+#define IOSVersion                 @"2017-03-01"
+
+/*  数据库版本号 */
+#define SQL_VERSION                @"2.0"
+/** 快看API正式环境 */
+#define SITE_URL                    @"http://m.haohuida.cn"
+
+/** 测试环境 */
+//#define SITE_URL                    @"http://101.200.193.169:3080"
+//#define SITE_URL                    @"http://210.73.212.35:3080"
+
+//#define SITE_URL                   @"http://101.251.204.195:9090"
+
+
+#define ZIP_URL                    @"http://m.haohuida.cn/asg/portal/zip/download.do?"
+
+
+#define SITE_URL137                @"http://www.haohuida.cn:8080/asg/portal.do"
+#define SITE_H5URL                 @"http://101.251.204.195"
+
+#define BundleID                   @"UUID"
+#define BundleIDUserID             @"userID"
+#define BundleIDRemainSum          @"remainSum"
+
+#define IsLogin                    [[NSUserDefaults standardUserDefaults] objectForKey:@"isLoginSuccess"]
+
+
+//渠道号
+#define ChannelCode                @"E100001"
+//产品线
+#define AppCode                    @"i001"
+//结算渠道号
+#define ChannelFee                 @"Apple"
+
+/** 友盟APPKEY */
+#define YMAppKey                   @"57bd6e4a67e58e69ee002ea4"
+//** 微信AppID */
+#define WXAppID                    @"wx2d567f33ab16a8b8"
+/** 微信AppSecret */
+#define WXAppSecret                @"4ae957181aeb23014e1cd2b5df6956b2"
+
+/** QQAppID */
+#define QQAppID                    @"101366226"
+/** QQAppSecret */
+#define QQAppSecret                @"dc6148477b33398360cd3cc2189c22c3"
+
+/** 微博AppID */
+#define WBAppID                    @"1630884126"
+/** 微博AppSecret */
+#define WBAppSecret                @"7c72515629f6d4479f7b741871be5d95"
+
+/** wifi传的书籍唯一标识 */
+#define BookWifiOnlyID             @"BookWifiOnlyID"
+/** 书架唯一标识 */
+#define RackOnlyID                 @"RackOnlyID"
+/** 搜索记录唯一标识 */
+#define SearchRecordOnlyID         @"SearchRecordOnlyID"
+/** 阅读记录唯一标识 */
+#define ReadOnlyID                 @"ReadOnlyID"
+/** 热云AppKey */
+#define ReYunTruck                 @"ae6cf2f11b86c48d3227a045a0b9c5bd"
+
+
+//我的页面TopView高度
+#define MineTopViewH       150
+
+#define KKuaikan           (ScreenHeight / 640)
+
+/** 夜间模式的亮度 */
+#define NightAlpha             0.5
+
+//block self
+#define WEAKSELF typeof(self) __weak weakSelf = self;
+
+
+#define ScreenWidth                 [[UIScreen mainScreen]bounds].size.width
+#define ScreenHeight                [[UIScreen mainScreen]bounds].size.height
+#define CollectionCellW             (ScreenWidth / 3) - 20 *KKuaikan
+#define CollectionCellWIPad         (ScreenWidth / 4) - 20 *KKuaikan
+#define IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+
+#define CollectionCellH             145
+
+/** 判断是否夜间模式 */
+#define isNightView    [AppDelegate sharedApplicationDelegate].nightView.alpha > NightAlpha - 0.1
+//tabbar的前景色
+#define TabbarForgroundColor        [UIColor clearColor]
+
+
+#define SuspensionColor   [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:0.5]
+
+
+#define GreenColor     [UIColor colorWithRed:86/255.0 green:204/255.0 blue:95/255.0 alpha:1.0]
+/** 导航栏颜色 */
+#define NavigationColor        [UIColor colorWithRed:92/255.0 green:125/255.0 blue:187/255.0 alpha:1.0]
+
+/** 分割线颜色 */
+#define LineLabelColor        [UIColor colorWithRed:230/255.0 green:230/255.0 blue:230/255.0 alpha:1.0]
+
+
+/** 字体颜色51 */
+#define TextColor        [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]
+
+/** 字体颜色102 */
+#define LightTextColor        [UIColor colorWithRed:102/255.0 green:102/255.0 blue:102/255.0 alpha:1.0]
+
+/** 控制器背景颜色 */
+#define BackViewColor        [UIColor colorWithRed:244/255.0 green:244/255.0 blue:245/255.0 alpha:1.0]
+
+// 颜色
+#define ADColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define ADColorRGBA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+#define WhiteColor [UIColor whiteColor]
+#define ClearColor [UIColor clearColor]
+
+#define Font9  [UIFont systemFontOfSize:8.0]
+#define Font11 [UIFont systemFontOfSize:11.0]
+#define Font12 [UIFont systemFontOfSize:12.0]
+#define Font13 [UIFont systemFontOfSize:13.0]
+#define Font14 [UIFont systemFontOfSize:14.0]
+#define Font15 [UIFont systemFontOfSize:15.0]
+#define Font16 [UIFont systemFontOfSize:16.0]
+#define Font17 [UIFont systemFontOfSize:17.0]
+#define Font18 [UIFont systemFontOfSize:18.0]
+#define Font19 [UIFont systemFontOfSize:19.0]
+#define Font20 [UIFont systemFontOfSize:20.0]
+

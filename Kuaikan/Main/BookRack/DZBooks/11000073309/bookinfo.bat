@@ -1,0 +1,1 @@
+set p_app_name=天才小农民
